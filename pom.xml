@@ -19,6 +19,7 @@
         <slf4j.version>1.7.2</slf4j.version>
         <aspectj.version>1.7.1</aspectj.version>
         <jackson.version>2.1.0</jackson.version>
+        <junit.version>4.11</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.source>1.6</project.build.source>
         <project.build.target>1.6</project.build.target>
