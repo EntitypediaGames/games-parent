@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.entitypedia.games</groupId>
     <artifactId>entitypedia-games-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1-SNAPSHOT</version>
+    <version>1</version>
 
     <name>Entitypedia Games Parent</name>
     <description>Entitypedia Games Maven Parent</description>
@@ -26,9 +25,9 @@
     </properties>
 
     <scm>
-        <connection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk</connection>
-        <developerConnection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk</developerConnection>
-        <url>https://dev.entitypedia.org/svn/</url>
+        <connection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/tags/entitypedia-games-parent-1</connection>
+        <developerConnection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/tags/entitypedia-games-parent-1</developerConnection>
+        <url>https://dev.entitypedia.org/svn/tags/entitypedia-games-parent-1</url>
     </scm>
 
     <issueManagement>
