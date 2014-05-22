@@ -12,18 +12,20 @@
     <url>http://dev.entitypedia.org/</url>
 
     <properties>
-        <spring.version>3.2.8.RELEASE</spring.version>
-        <spring.security.version>3.2.2.RELEASE</spring.security.version>
-        <spring.security.oauth.version>2.0.0.M2</spring.security.oauth.version>
-        <hibernate.version>4.2.8.Final</hibernate.version>
-        <slf4j.version>1.7.6</slf4j.version>
-        <aspectj.version>1.7.4</aspectj.version>
-        <jackson.version>2.3.2</jackson.version>
+        <spring.version>4.0.5.RELEASE</spring.version>
+        <spring.security.version>3.2.3.RELEASE</spring.security.version>
+        <spring.security.oauth.version>2.0.1.RELEASE</spring.security.oauth.version>
+        <hibernate.version>4.3.5.Final</hibernate.version>
+        <slf4j.version>1.7.7</slf4j.version>
+        <aspectj.version>1.8.0</aspectj.version>
+        <jackson.version>2.3.3</jackson.version>
         <junit.version>4.11</junit.version>
         <pgsql.version>9.3-1100-jdbc41</pgsql.version>
         <signpost.version>1.2.1.2</signpost.version>
         <bonecp.version>0.8.0.RELEASE</bonecp.version>
-        <ehcache.version>2.8.1</ehcache.version>
+        <ehcache.version>2.8.2</ehcache.version>
+        <httpclient.version>4.3.3</httpclient.version>
+        <commonscodec.version>1.9</commonscodec.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.source>1.7</project.build.source>
@@ -75,6 +77,25 @@
             <url>https://dev.entitypedia.org/archiva/repository/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-bom</artifactId>
+                <version>${spring.security.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -174,7 +195,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.7.0.201403182114</version>
+                    <version>0.7.1.201405082137</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
