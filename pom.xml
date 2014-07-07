@@ -5,7 +5,7 @@
     <groupId>org.entitypedia.games</groupId>
     <artifactId>entitypedia-games-parent</artifactId>
     <packaging>pom</packaging>
-    <version>10-SNAPSHOT</version>
+    <version>10</version>
 
     <name>Entitypedia Games Parent</name>
     <description>Entitypedia Games Maven Parent</description>
@@ -55,9 +55,9 @@
     </mailingLists>
 
     <scm>
-        <connection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk/</connection>
-        <developerConnection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk/</developerConnection>
-        <url>https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/</url>
+        <connection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/tags/entitypedia-games-parent-10</connection>
+        <developerConnection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/tags/entitypedia-games-parent-10</developerConnection>
+        <url>https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/tags/entitypedia-games-parent-10</url>
     </scm>
 
     <issueManagement>
