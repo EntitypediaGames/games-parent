@@ -25,13 +25,13 @@
     </licenses>
 
     <properties>
-        <spring.version>4.1.1.RELEASE</spring.version>
+        <spring.version>4.1.4.RELEASE</spring.version>
         <spring.security.version>3.2.5.RELEASE</spring.security.version>
         <spring.security.oauth.version>2.0.6.RELEASE</spring.security.oauth.version>
-        <hibernate.version>4.3.7.Final</hibernate.version>
+        <hibernate.version>4.3.8.Final</hibernate.version>
         <slf4j.version>1.7.10</slf4j.version>
         <aspectj.version>1.8.4</aspectj.version>
-        <jackson.version>2.4.3</jackson.version>
+        <jackson.version>2.5.1</jackson.version>
         <junit.version>4.12</junit.version>
         <pgsql.version>9.3-1100-jdbc41</pgsql.version>
         <signpost.version>1.2.1.2</signpost.version>
