@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
+
     <groupId>org.entitypedia.games</groupId>
     <artifactId>entitypedia-games-parent</artifactId>
     <packaging>pom</packaging>
@@ -9,24 +15,31 @@
 
     <name>Entitypedia Games Parent</name>
     <description>Entitypedia Games Maven Parent</description>
-    <url>http://dev.entitypedia.org/</url>
+    <url>https://github.com/EntitypediaGames/games-parent</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/EntitypediaGames/games-parent/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <spring.version>4.1.1.RELEASE</spring.version>
         <spring.security.version>3.2.5.RELEASE</spring.security.version>
-        <spring.security.oauth.version>2.0.3.RELEASE</spring.security.oauth.version>
+        <spring.security.oauth.version>2.0.6.RELEASE</spring.security.oauth.version>
         <hibernate.version>4.3.7.Final</hibernate.version>
-        <slf4j.version>1.7.7</slf4j.version>
-        <aspectj.version>1.8.3</aspectj.version>
+        <slf4j.version>1.7.10</slf4j.version>
+        <aspectj.version>1.8.4</aspectj.version>
         <jackson.version>2.4.3</jackson.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.12</junit.version>
         <pgsql.version>9.3-1100-jdbc41</pgsql.version>
         <signpost.version>1.2.1.2</signpost.version>
         <bonecp.version>0.8.0.RELEASE</bonecp.version>
         <ehcache.version>2.8.2</ehcache.version>
-        <httpclient.version>4.3.5</httpclient.version>
+        <httpclient.version>4.4</httpclient.version>
         <commonscodec.version>1.9</commonscodec.version>
-        <javassist.version>3.18.2-GA</javassist.version>
+        <javassist.version>3.19.0-GA</javassist.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.source>1.7</project.build.source>
@@ -37,7 +50,6 @@
         <developer>
             <id>autayeu</id>
             <name>Aliaksandr Autayeu</name>
-            <email>autayeu@disi.unitn.it</email>
             <url>http://autayeu.com</url>
             <timezone>+1</timezone>
             <properties>
@@ -46,36 +58,27 @@
         </developer>
     </developers>
 
-    <mailingLists>
-        <mailingList>
-            <name>entitypedia-news</name>
-            <subscribe>http://disi.unitn.it/mailman/listinfo/entitypedia-news</subscribe>
-            <unsubscribe>http://disi.unitn.it/mailman/listinfo/entitypedia-news</unsubscribe>
-            <archive>http://disi.unitn.it/mailman/listinfo/entitypedia-news</archive>
-        </mailingList>
-    </mailingLists>
-
     <scm>
-        <connection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk/</connection>
-        <developerConnection>scm:svn:https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/trunk/</developerConnection>
-        <url>https://dev.entitypedia.org/svn/entitypedia/apps/word-games-parent/</url>
+        <connection>scm:git:https://github.com/EntitypediaGames/games-parent.git</connection>
+        <developerConnection>scm:git:git@github.com:EntitypediaGames/games-parent.git</developerConnection>
+        <url>https://github.com/EntitypediaGames/games-parent</url>
     </scm>
 
     <issueManagement>
-        <system>Trac</system>
-        <url>https://dev.entitypedia.org/trac/entitypedia/</url>
+        <system>Github</system>
+        <url>https://github.com/EntitypediaGames/games-parent/issues</url>
     </issueManagement>
 
     <distributionManagement>
         <repository>
-            <id>entitypedia</id>
-            <name>Entitypedia Maven2 Repository</name>
-            <url>https://dev.entitypedia.org/archiva/repository/internal/</url>
+            <id>sonatype-nexus-staging</id>
+            <name>sonatype-nexus-staging</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <snapshotRepository>
-            <id>entitypedia-snapshots</id>
-            <name>Entitypedia Maven2 Snapshots Repository</name>
-            <url>https://dev.entitypedia.org/archiva/repository/snapshots/</url>
+            <id>sonatype-nexus-snapshots</id>
+            <name>sonatype-nexus-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -128,7 +131,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>2.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -153,12 +156,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jarsigner-plugin</artifactId>
-                    <version>1.3.2</version>
+                    <version>1.4</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.5</version>
+                    <version>1.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -186,12 +189,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.17</version>
+                    <version>2.18.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.17</version>
+                    <version>2.18.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
@@ -206,12 +209,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>2.6.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>2.10</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -221,26 +224,37 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>1.8</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>2.5.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>2.7</version>
+                    <version>2.8</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>1.4</version>
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.4</version>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
         <profile>
-            <id>release</id>
-
+            <id>sonatype-oss-release</id>
             <properties>
                 <maven.test.skip>true</maven.test.skip>
             </properties>
@@ -256,7 +270,44 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <version>1.4</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>2.5</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.4</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.10.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-deploy-plugin</artifactId>
+                        <version>2.8.2</version>
                         <configuration>
                             <updateReleaseInfo>true</updateReleaseInfo>
                         </configuration>
@@ -264,6 +315,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
